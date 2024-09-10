@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        input[type=text] {
+            border: none;
+            border-bottom: 2px solid black;
+            background-color: #7695FF;
+        }
+        .signupdiv{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #7695FF;
+            font-weight: bold;
+            height:400px;
+            width:90%;
+            margin:auto;
+            border-radius: 10px;
+            font-size: 22px;
+            color: white;
+        }
+        .heading{
+            text-align: center;
+            font-size: 40px;
+            color:#F5004F;
+        }
+        .btn{
+        margin:10px;
+        background-color:red;
+        color: white;
+        text-align: center;
+        box-shadow: 2px 2px 4px;
+        font-size: 25px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 10px;
+    }
+    .box{
+        padding:5px;
+        font-weight: bold;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    input[type=text]:focus{
+        border: none;
+        border-bottom: 2px solid black;
+        background-color: #7695FF;
+        outline: none;
+    }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Get Ready to Boost Your Productivity Ever Before</h1></br></br></br>
+    <div class="signupdiv">
+    <form method="post" action="/signup">
+        <label>Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" name="name" class="box"/></br></br></br>
+        <label>E-mail: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" name="email" class="box"/></br></br></br>
+        <label>Password: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" name="password" class="box"/></br></br></br>
+        <button type="submit" class="btn">Register</button>
+    </form>
+    </div>
+</body>
+</html>

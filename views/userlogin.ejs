@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        input[type=text] {
+            border: none;
+            border-bottom: 2px solid black;
+            background-color: #7695FF;
+        }
+        .logindiv{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #7695FF;
+            font-weight: bold;
+            height:300px;
+            width:90%;
+            margin:auto;
+            border-radius: 10px;
+            font-size: 22px;
+            color: white;
+        }
+        .heading{
+            text-align: center;
+            font-size: 40px;
+            color:#F5004F;
+        }
+        .btn{
+        margin:10px;
+        background-color:red;
+        color: white;
+        text-align: center;
+        box-shadow: 2px 2px 4px;
+        font-size: 25px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 10px;
+    }
+    .box{
+        padding:5px;
+        font-weight: bold;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    input[type=text]:focus{
+        border: none;
+        border-bottom: 2px solid black;
+        background-color: #7695FF;
+        outline: none;
+    }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Login Now and Surveil Your Tasks</h1></br></br></br>
+    <div class="logindiv">
+    <form method="post" action="/login">
+        <label>Username: &nbsp;&nbsp;</label>
+        <input type="text" name="email" class="box"/></br></br></br>
+        <label>Password: &nbsp;&nbsp;</label>
+        <input type="text" name="password" class="box"/></br></br></br>
+        <button type="submit" class="btn">Login</button>
+    </form>
+    </div>
+
+</body>
+</html>

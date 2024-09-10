@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">    
+    <style>
+        body{
+            margin:15px;
+        }
+        input[type=text] {
+            font-size:20px;
+            font-weight:bold;
+            border: none;
+            border-bottom: 2px solid black;
+        }
+        .signupdiv{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #7695FF;
+            font-weight: bold;
+            height:600px;
+            width:90%;
+            margin:auto;
+            border-radius: 10px;
+            font-size: 22px;
+            color: white;
+        }
+        .heading{
+        color:#6439FF;
+        font-size: 50px;
+        font-family:Oswald, Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        padding: 10px;
+        text-shadow: 5px 5px #FCDE70;
+        }
+        .btn{
+        margin:10px;
+        background-color:#F5004F;
+        color: white;
+        text-align: center;
+        box-shadow: 2px 2px 4px;
+        font-size: 22px;
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-radius: 10px;
+    }
+    .btns{
+        margin:5px;
+        background-color:#06D001;
+        color: white;
+        text-align: center;
+        box-shadow: 2px 2px 4px;
+        font-size: 22px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 8px;
+    }
+    .box{
+        padding:5px;
+        font-weight: bold;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    input[type=text]:focus{
+        border: none;
+        border-bottom: 2px solid black;
+        outline: none;
+    }
+    .taskdiv{
+        font-weight:bold;
+        font-size:20px;
+        padding: 15px;
+    }
+    .subh{
+        color:#F5004F;
+        font-size:35px;
+        font-weight: bold;
+    }
+    .form1 label{
+        font-weight: bold;
+        font-size:22px;
+    }
+    table{
+        width:100%;
+    }
+    table tr td{
+        padding:10px;
+        font-size:22px;
+        font-weight:bold;
+    }
+    </style>
+    <title>Welcome <%= user.name %>,</title>
+</head>
+<body>
+    <h1 class="heading">Your Own Personal Assistant</h1>
+    <div class="taskdiv">
+    <p class="subh"><label>Schedule New Task: </label></p>
+    <form method="post" action="/createTask" class="form1">
+        <label>Task Title: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" name="taskName" class="box"/></br></br></br>
+        <label>Task Description: &nbsp;</label>
+        <input type="text" name="taskBody" class="box"/></br></br></br>
+        <label>Deadline: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="date" name="deadline" class="box"/></br></br></br>
+        <input type="text" name="email" style="display:none" value="<%= user.email %>"/>
+        <input type="text" name="status" style="display:none" value="Pending"/>
+        <button type="submit" class="btn">Create New Task</button>
+    </form>
+    </div>
+</br></br></br>
+<p class="subh">Manage Your Tasks: </p>
+    <% tasks.forEach((t,index) => { %>
+     <table>
+        <tr><td>Sr No.</td><td>Name</td><td>Description</td><td>Deadline</td><td>Status</td><td>Mark as Completed</td></tr>
+        <tr><td><%=index+1%>.</td><td><%= t.taskName %></td><td><%= t.taskBody %></td><td><%= t.deadline %></td><td><%= t.status %></td><td>
+            <form>
+                <input type="text" name="email" style="display:none" value="<%= user.email %>"/>
+                        <input type="text" name="email" style="display:none" value="<%= user.email %>"/>
+                        <input type="text" name="taskName" style="display:none" value="<%= t.taskName %>"/>
+                        <input type="date" name="deadline" style="display:none" value="<%= t.deadline %>"/>
+                        <button type="submit" class="btns">Mark Completed</button></form>
+        </tr>
+     </table>
+    <% }) %>
+
+
+    </br></br></br></br></br>
+</body>
+</html>
