@@ -115,9 +115,10 @@
     </div>
 </br></br></br>
 <p class="subh">Manage Your Tasks: </p>
+<table>
+<tr><td>Sr No.</td><td>Name</td><td>Description</td><td>Deadline</td><td>Status</td><td>Mark as Completed</td></tr>
     <% tasks.forEach((t,index) => { %>
-     <table>
-        <tr><td>Sr No.</td><td>Name</td><td>Description</td><td>Deadline</td><td>Status</td><td>Mark as Completed</td></tr>
+     
         <tr><td><%=index+1%>.</td><td><%= t.taskName %></td><td><%= t.taskBody %></td><td><%= t.deadline %></td><td><%= t.status %></td><td>
             <form>
                 <input type="text" name="email" style="display:none" value="<%= user.email %>"/>
@@ -126,9 +127,9 @@
                         <input type="date" name="deadline" style="display:none" value="<%= t.deadline %>"/>
                         <button type="submit" class="btns">Mark Completed</button></form>
         </tr>
-     </table>
+     
     <% }) %>
-
+</table>
 
     </br></br></br></br></br>
 </body>
