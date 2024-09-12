@@ -4,6 +4,8 @@ Task No: 02 [To create a to-do-list web app]
 In this the tech stack used is Node.js, MongoDB, Vanilla JS, HTML, CSS, EJS
 
 Code Overview:
+https://www.loom.com/share/88cbcc3c6e5c49819af401524aa40350?sid=f0244a75-19a5-4ee3-858a-af3dea595ccc
+Link to see how it works, a video of 1 minute.
 The code basically compromises of index.js, start of file and is connected to routes folder, which handles all routes of post, get, etc.
 The views folder compromises basically of the frontend part.
 The middlewares compromises of the login, signup part.
